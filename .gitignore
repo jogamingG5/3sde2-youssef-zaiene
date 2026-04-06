@@ -1,0 +1,25 @@
+# Compiled files
+target/
+*.class
+
+# IDE files
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+.mvn/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+application-prod.properties
+
+# Docker
+*.tar
