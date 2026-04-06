@@ -29,7 +29,6 @@ pipeline {
         
         stage('Package') {
             steps {
-                // Skip tests to avoid MySQL connection issue
                 sh 'mvn package -DskipTests'
             }
         }
