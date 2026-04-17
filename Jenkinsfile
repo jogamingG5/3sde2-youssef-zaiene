@@ -26,7 +26,15 @@ pipeline {
                 sh 'mvn compile'
             }
         }
-        
+        stage('MVN SONARQUBE') {
+            steps {
+                sh '''
+                    mvn sonar:sonar \\
+                    -Dsonar.host.url=http://localhost:9000 \\
+                    -Dsonar.login=sqa_e4456b14aa4489633aa0ffff396d47da04b31a60
+                '''
+            }
+        }
         stage('Package') {
             steps {
                 sh 'mvn package -DskipTests'
